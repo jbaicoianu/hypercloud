@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Karmatic Arcade";
+  src: url(/media/hypercloud/ka1.ttf);
+}
+
+.hypercloud {
+}
+.hypercloud_panel {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: .5em;
+  background: rgba(0,0,0,.65);
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  color: black;
+  z-index: 50;
+}
+.hypercloud_panel button {
+  display: block;
+  width: 100%;
+}
+.hypercloud_logo {
+  background: url(/images/hypercloud/hypercloud.svg) no-repeat;
+  background-size: 100%;
+  font-family: Karmatic Arcade;
+  position: fixed;
+  z-index: 100;
+  bottom: 1em;
+  left: 1em;
+  width: 12em;
+  height: 7.2em;
+  color: #009;
+  font-size: 1em;
+  transition: 1s font-size linear;
+}
+.hypercloud_logo h1 {
+  padding-top: 5.25em;
+  color: #009;
+  text-align: center;
+  font-size: .8em;
+}

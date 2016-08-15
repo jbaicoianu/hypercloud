@@ -1,0 +1,15 @@
+Basic Overview:
+
+- tablet scans raw point cloud data, ~20,000 points @ 3 fps
+- filter these points to remove outliers, then build a voxel map out of them
+- send the differences over the network, and incorporate them into our view of the world
+
+  PointCloud voxelworld
+  for each frame: 
+    PointCloud filteredframe = filterOutliers(frame)
+    PointCloud voxelframe = voxelize(filteredframe)
+    PointCloud voxeldiffs = diff(voxelframe, voxelworld);
+    network.send(voxeldiffs)
+    voxelworld.merge(voxeldiffs)
+
+
